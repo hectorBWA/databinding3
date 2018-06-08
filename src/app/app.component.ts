@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+
+
+class Person {
+  }
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,15 +13,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
+  female = new Person('Jane Doe', 'f', 5);
+  male = new Person('John Doe', 'm', 4);
+
+  person;
+
+  pickRAndomPerson(){
+    const index = Math.floor(Math.random());
+
+  }
+
 
   
 }
-
-let male = 'm';
-let female = 'f';
-
-class Person {
-  name: string = "Hector" ;
-  gender: any = male ;
-  rating: number = 10 ;
-  }
